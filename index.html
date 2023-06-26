@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <script>
+    let units = ['heure(s)', 'jour(s)', 'mois', 'année(s)'];
+    let other = ['pomme', 'poire', 'banane'];
+  
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+    function randomizerNumber() {
+      return getRandomInt(10);
+    }
+    function randomizerUnit() {
+      return units[getRandomInt(units.length)];
+    }
+    function randomizerOther() {
+      return other[getRandomInt(other.length)];
+    }
+
+    function throwTheDices() {
+      spin('number', 500, randomizerNumber);
+      spin('unit', 1000, randomizerUnit);
+      spin('other', 1500, randomizerOther);
+    }
+    function setClass(id, className) {
+      var e = document.getElementById(id);
+      e.className = className;
+    }
+    function setContent(id, content) {
+      var e = document.getElementById(id);
+      e.innerHTML = content;
+    }
+    function timer(id, randomizer) {
+      setClass(id, '');
+      setContent(id, randomizer());
+    }
+    function spin(id, duration, randomizer) {
+      // setContent(id, '???');
+      setContent(id, '');
+      setClass(id, 'lds-hourglass');
+      setTimeout(timer, duration, id, randomizer)
+    }
+  </script>
+  <!-- <Link rel="StyleSheet" href="reset.css" type = "text/css" /> -->
+  <Link rel="StyleSheet" href="global.css" type = "text/css" />
+  <Link rel="StyleSheet" href="spin.css" type = "text/css" />
+</head>
+
+<body >
+  <button class="button-54" role="button" onclick="throwTheDices()">Lancer les dés</button>
+  <div class="box">
+    <div id="number">?</div>
+    <div id="unit">?</div>
+    <div id="other">?</div>
+  </div>
+</body>
+
+</html>

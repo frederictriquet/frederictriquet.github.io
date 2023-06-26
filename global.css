@@ -1,0 +1,22 @@
+body {
+  background-color: darkslategrey;
+  margin: auto;
+  color: whitesmoke;
+  font: 4em sans-serif;
+  height: 1000px;
+}
+
+.box {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+
+}
+
+.box div {
+  width: 10%;
+
+}
