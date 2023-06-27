@@ -2,8 +2,11 @@ body {
   background-color: darkslategrey;
   margin: auto;
   color: whitesmoke;
-  font: 4em sans-serif;
+  font: 3em sans-serif;
   height: 1000px;
+  opacity: 100%;
+  transition: 3s;
+  text-transform: uppercase;
 }
 
 .box {
@@ -13,10 +16,32 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 80%;
-
 }
 
-.box div {
-  width: 10%;
+.fadeout {
+  opacity: 0%;
+  transition: 3s;
+}
 
+#name1, #name2 {
+  margin: 1em;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#event {
+  margin-top: 1em;
+}
+
+svg .spinOff {
+  visibility: hidden;
 }

@@ -1,60 +1,125 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 
 <head>
   <script>
-    let units = ['heure(s)', 'jour(s)', 'mois', 'année(s)'];
-    let other = ['pomme', 'poire', 'banane'];
-  
+    let name1 = 'Julie';
+    let name2 = 'Benoît';
+
+    let durations = ['1 soirée', '3 jours', '2 semaines', '1 mois', '4 mois', '6 mois', '1 an', '3 ans', '5 ans', '10 ans', '15 ans', '20 ans'];
+    let events = ["il a rencontré quelqu'un d'autre au travail", "elle aime dormir avec ses chaussettes", "il voudrait faire le tour du monde"];
+
     function getRandomInt(max) {
       return Math.floor(Math.random() * max);
     }
-    function randomizerNumber() {
-      return getRandomInt(10);
-    }
-    function randomizerUnit() {
-      return units[getRandomInt(units.length)];
-    }
-    function randomizerOther() {
-      return other[getRandomInt(other.length)];
+    function getRandomFromArray(array) {
+      return array[getRandomInt(array.length)];
     }
 
-    function throwTheDices() {
-      spin('number', 500, randomizerNumber);
-      spin('unit', 1000, randomizerUnit);
-      spin('other', 1500, randomizerOther);
+    function randomizerDuration() {
+      return getRandomFromArray(durations);
     }
+    function randomizerEvent() {
+      return getRandomFromArray(events);
+    }
+
     function setClass(id, className) {
       var e = document.getElementById(id);
       e.className = className;
+    }
+    function addClass(id, className) {
+      var e = document.getElementById(id);
+      e.classList.add(className);
+    }
+    function removeClass(id, className) {
+      var e = document.getElementById(id);
+      e.classList.remove(className);
     }
     function setContent(id, content) {
       var e = document.getElementById(id);
       e.innerHTML = content;
     }
-    function timer(id, randomizer) {
-      setClass(id, '');
-      setContent(id, randomizer());
+    function resetAll() {
+      setContent('duration', '');
+      setContent('event', '');
+      setClass('clock', 'spinOff');
     }
-    function spin(id, duration, randomizer) {
-      // setContent(id, '???');
-      setContent(id, '');
-      setClass(id, 'lds-hourglass');
-      setTimeout(timer, duration, id, randomizer)
+
+    function clockTimer() {
+      console.log('done');
+      addClass('clock', 'spinOff');
+      setContent('duration', randomizerDuration());
+    }
+
+    function spinClock(duration) {
+      setContent('duration', '');
+      removeClass('clock', 'spinOff');
+      setTimeout(clockTimer, duration);
+    }
+
+    function timerEvent() {
+      removeClass('event', 'lds-hourglass');
+      setContent('event', randomizerEvent());
+    }
+
+    function spinEvent(duration) {
+      setContent('event', '');
+      addClass('event', 'lds-hourglass');
+      setTimeout(timerEvent, duration);
+    }
+
+    function throwTheDices() {
+      spinClock(5000);
+      spinEvent(7500);
+    }
+    function fade(out) {
+      document.body.className = out ? 'fadeout' : '';
+    }
+    let actionStep = 2;
+    function action() {
+      switch (actionStep % 3) {
+        case 0: throwTheDices(); break;
+        case 1: fade(true); break;
+        case 2: resetAll(); fade(false); break;
+      }
+      ++actionStep;
+    }
+    function load() {
+      setContent('name1', name1);
+      setContent('name2', name2);
+      resetAll();
     }
   </script>
-  <!-- <Link rel="StyleSheet" href="reset.css" type = "text/css" /> -->
-  <Link rel="StyleSheet" href="global.css" type = "text/css" />
-  <Link rel="StyleSheet" href="spin.css" type = "text/css" />
+  <Link rel="StyleSheet" href="reset.css" type="text/css" />
+  <Link rel="StyleSheet" href="global.css" type="text/css" />
+  <Link rel="StyleSheet" href="spin.css" type="text/css" />
 </head>
 
-<body >
-  <button class="button-54" role="button" onclick="throwTheDices()">Lancer les dés</button>
-  <div class="box">
-    <div id="number">?</div>
-    <div id="unit">?</div>
-    <div id="other">?</div>
+<body onload="load()" onclick="action()" class="fadeout">
+  <div class="names">
+    <span id="name1"></span>
+    <span id="name2"></span>
+  </div>
+
+  <div class="center">
+    <svg id="svg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50%" cy="50%" r="245" stroke="white" stroke-width="5" fill="none" />
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" id="duration"></text>
+      <g id="clock" class="spinOff">
+        <line x1="50%" y1="50%" x2="50%" y2="5%" stroke="white" stroke-width="5">
+          <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 250 250;360 250 250" repeatCount="indefinite" />
+        </line>
+        <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="white" stroke-width="5">
+          <animateTransform attributeName="transform" type="rotate" dur="9s" values="0 250 250;360 250 250" repeatCount="indefinite" />
+        </line>
+      </g>
+    </svg>
+  </div>
+  <div class="center">
+    <div id="event">
+    </div>
   </div>
 </body>
 
 </html>
+<!-- https://github.com/n3r4zzurr0/svg-spinners -->
