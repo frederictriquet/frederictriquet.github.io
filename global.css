@@ -1,14 +1,17 @@
 body {
-  background-color: darkslategrey;
+  background-color: black;
   margin: auto;
   color: whitesmoke;
   font: 3em sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   height: 1000px;
   opacity: 100%;
   transition: 3s;
   text-transform: uppercase;
 }
-
+html, body, .feullHeight {
+  height: 100%;
+}
 .box {
   display: flex;
   width: 50%;

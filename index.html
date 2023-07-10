@@ -96,27 +96,31 @@
 </head>
 
 <body onload="load()" onclick="action()" class="fadeout">
-  <div class="names">
-    <span id="name1"></span>
-    <span id="name2"></span>
-  </div>
+  <div class="fullHeight">
+    <div class="names">
+      <span id="name1"></span>
+      <span id="name2"></span>
+    </div>
 
-  <div class="center">
-    <svg id="svg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50%" cy="50%" r="245" stroke="white" stroke-width="5" fill="none" />
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" id="duration"></text>
-      <g id="clock" class="spinOff">
-        <line x1="50%" y1="50%" x2="50%" y2="5%" stroke="white" stroke-width="5">
-          <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 250 250;360 250 250" repeatCount="indefinite" />
-        </line>
-        <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="white" stroke-width="5">
-          <animateTransform attributeName="transform" type="rotate" dur="9s" values="0 250 250;360 250 250" repeatCount="indefinite" />
-        </line>
-      </g>
-    </svg>
-  </div>
-  <div class="center">
-    <div id="event">
+    <div class="center">
+      <svg id="svg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50%" cy="50%" r="245" stroke="white" stroke-width="5" fill="none" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" id="duration"></text>
+        <g id="clock" class="spinOff">
+          <line x1="50%" y1="50%" x2="50%" y2="5%" stroke="white" stroke-width="5">
+            <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 250 250;360 250 250"
+              repeatCount="indefinite" />
+          </line>
+          <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="white" stroke-width="5">
+            <animateTransform attributeName="transform" type="rotate" dur="9s" values="0 250 250;360 250 250"
+              repeatCount="indefinite" />
+          </line>
+        </g>
+      </svg>
+    </div>
+    <div class="center">
+      <div id="event">
+      </div>
     </div>
   </div>
 </body>
