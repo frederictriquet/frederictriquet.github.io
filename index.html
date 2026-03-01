@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frédéric Triquet — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="avatar-wrap">
+        <img src="https://github.com/frederictriquet.png" alt="Frédéric Triquet" class="avatar" />
+      </div>
+      <div class="header-text">
+        <h1>Frédéric Triquet</h1>
+        <p class="tagline">Développeur passionné · TypeScript · Python · Go · Rust · Svelte</p>
+        <a class="gh-link" href="https://github.com/frederictriquet" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          frederictriquet
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
+      <button class="filter-btn" data-filter="Python">Python</button>
+      <button class="filter-btn" data-filter="Go">Go</button>
+      <button class="filter-btn" data-filter="Kotlin">Kotlin</button>
+      <button class="filter-btn" data-filter="Svelte">Svelte</button>
+    </section>
+
+    <section class="grid" id="projects-grid">
+
+      <article class="card" data-lang="TypeScript">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>NosElus</h2>
+            <span class="lang-badge typescript">TypeScript</span>
+          </div>
+          <p class="card-desc">Template SvelteKit production-ready avec CI/CD, tests Playwright & Vitest, mutation testing à 100%, et déploiement Docker.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">SvelteKit</span>
+            <span class="tag">Docker</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Playwright</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/NosElus" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Python">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>Publipostage</h2>
+            <span class="lang-badge python">Python</span>
+          </div>
+          <p class="card-desc">CLI open-source pour publier des vidéos sur TikTok et Instagram directement depuis le terminal, via OAuth 2.0 sans stockage serveur de credentials.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">TikTok API</span>
+            <span class="tag">Instagram API</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">CLI</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/Publipostage" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Python">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>Jukebox</h2>
+            <span class="lang-badge python">Python</span>
+          </div>
+          <p class="card-desc">Application audio modulaire pour Mac, Linux et Raspberry Pi. Lecture MP3/FLAC/WAV, contrôle du volume, configuration YAML avec validation Pydantic.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">VLC</span>
+            <span class="tag">Pydantic</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Audio</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/Jukebox" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Kotlin">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>ManyInOne</h2>
+            <span class="lang-badge kotlin">Kotlin</span>
+          </div>
+          <p class="card-desc">Application Android multi-fonctionnalités développée en Kotlin.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">Android</span>
+            <span class="tag">Kotlin</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/ManyInOne" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="TypeScript">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>FemtoLogger</h2>
+            <span class="lang-badge typescript">TypeScript</span>
+          </div>
+          <p class="card-desc">Logger minimaliste pour apps TypeScript/Node. Zéro dépendance, architecture par transports (Telegram, Slack, Discord…), couverture de tests à 97%.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">npm package</span>
+            <span class="tag">Telegram</span>
+            <span class="tag">Zero-dep</span>
+            <span class="tag">Node 18+</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/FemtoLogger" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Python">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>FemtoLogger-python</h2>
+            <span class="lang-badge python">Python</span>
+          </div>
+          <p class="card-desc">Portage Python de FemtoLogger. Logger async minimaliste avec transport Telegram, installable via pip.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">pip package</span>
+            <span class="tag">Async</span>
+            <span class="tag">Telegram</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/FemtoLogger-python" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Go">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>WhenIdle</h2>
+            <span class="lang-badge go">Go</span>
+          </div>
+          <p class="card-desc">Daemon macOS qui surveille l'utilisation CPU et lance automatiquement des tâches intensives (encodage, compilation…) uniquement pendant les périodes d'inactivité.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">macOS</span>
+            <span class="tag">Daemon</span>
+            <span class="tag">CPU monitoring</span>
+            <span class="tag">SIGSTOP/SIGCONT</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/WhenIdle" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="Svelte">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>VideoSequencer</h2>
+            <span class="lang-badge svelte">Svelte</span>
+          </div>
+          <p class="card-desc">Séquenceur vidéo interactif construit avec Svelte.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">Svelte</span>
+            <span class="tag">Vidéo</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/VideoSequencer" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="TypeScript">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>PrivaSend</h2>
+            <span class="lang-badge typescript">TypeScript</span>
+          </div>
+          <p class="card-desc">Alternative open-source à WeTransfer pour infrastructure privée (VPC, réseau local). Partage de fichiers jusqu'à 5 Go, upload par chunks, liens sécurisés avec token.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">File sharing</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Self-hosted</span>
+            <span class="tag">Chunked upload</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/PrivaSend" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+      <article class="card" data-lang="TypeScript">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2>PrivateTab</h2>
+            <span class="lang-badge typescript">TypeScript</span>
+          </div>
+          <p class="card-desc">Extension navigateur (Chrome & Firefox) pour protéger des onglets sensibles par mot de passe. Verrouillage automatique, chiffrement PBKDF2, permissions minimales.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">Chrome</span>
+            <span class="tag">Firefox</span>
+            <span class="tag">Extension</span>
+            <span class="tag">PBKDF2</span>
+          </div>
+          <a class="repo-link" href="https://github.com/frederictriquet/PrivateTab" target="_blank" rel="noopener">Voir le repo →</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Frédéric Triquet · <a href="https://github.com/frederictriquet" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
