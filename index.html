@@ -41,13 +41,13 @@
             <h2>NosElus</h2>
             <span class="lang-badge typescript">TypeScript</span>
           </div>
-          <p class="card-desc">Template SvelteKit production-ready avec CI/CD, tests Playwright & Vitest, mutation testing à 100%, et déploiement Docker.</p>
+          <p class="card-desc">Plateforme de transparence parlementaire : suivez l'activité, les votes et les positions politiques des élus (Assemblée, Sénat, Parlement européen). Profils détaillés, heatmaps, matrice politique.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
             <span class="tag">SvelteKit</span>
+            <span class="tag">PostgreSQL</span>
             <span class="tag">Docker</span>
-            <span class="tag">CI/CD</span>
             <span class="tag">Playwright</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/NosElus" target="_blank" rel="noopener">Voir le repo →</a>
@@ -79,14 +79,14 @@
             <h2>Jukebox</h2>
             <span class="lang-badge python">Python</span>
           </div>
-          <p class="card-desc">Application audio modulaire pour Mac, Linux et Raspberry Pi. Lecture MP3/FLAC/WAV, contrôle du volume, configuration YAML avec validation Pydantic.</p>
+          <p class="card-desc">Application audio modulaire pour Mac, Linux et Raspberry Pi. Lecture MP3/FLAC/AIFF/WAV, interface PySide6, architecture de plugins (navigateur, filtre genre, cue sheets DJ).</p>
         </div>
         <div class="card-footer">
           <div class="tags">
+            <span class="tag">PySide6</span>
             <span class="tag">VLC</span>
-            <span class="tag">Pydantic</span>
+            <span class="tag">Plugins</span>
             <span class="tag">Raspberry Pi</span>
-            <span class="tag">Audio</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/Jukebox" target="_blank" rel="noopener">Voir le repo →</a>
         </div>
@@ -98,12 +98,14 @@
             <h2>ManyInOne</h2>
             <span class="lang-badge kotlin">Kotlin</span>
           </div>
-          <p class="card-desc">Application Android multi-fonctionnalités développée en Kotlin.</p>
+          <p class="card-desc">Application Android combinant scanner QR/codes-barres, gestionnaire de cartes de fidélité et lecteur radio en streaming. Architecture MVVM avec Jetpack Compose, CameraX et ML Kit.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
-            <span class="tag">Android</span>
-            <span class="tag">Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">CameraX</span>
+            <span class="tag">ML Kit</span>
+            <span class="tag">ExoPlayer</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/ManyInOne" target="_blank" rel="noopener">Voir le repo →</a>
         </div>
@@ -115,7 +117,7 @@
             <h2>FemtoLogger</h2>
             <span class="lang-badge typescript">TypeScript</span>
           </div>
-          <p class="card-desc">Logger minimaliste pour apps TypeScript/Node. Zéro dépendance, architecture par transports (Telegram, Slack, Discord…), couverture de tests à 97%.</p>
+          <p class="card-desc">Logger léger et extensible pour apps TypeScript/Node. Zéro dépendance runtime (~10 Ko), architecture par transports (Telegram, Slack, Discord…), les erreurs de log ne font jamais crasher l'app.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
@@ -134,7 +136,7 @@
             <h2>FemtoLogger-python</h2>
             <span class="lang-badge python">Python</span>
           </div>
-          <p class="card-desc">Portage Python de FemtoLogger. Logger async minimaliste avec transport Telegram, installable via pip.</p>
+          <p class="card-desc">Portage Python de FemtoLogger. Logger async minimaliste avec support multi-transports en parallèle, transport Telegram, gestion d'erreurs robuste. Seule dépendance : httpx.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
@@ -152,14 +154,14 @@
             <h2>WhenIdle</h2>
             <span class="lang-badge go">Go</span>
           </div>
-          <p class="card-desc">Daemon macOS qui surveille l'utilisation CPU et lance automatiquement des tâches intensives (encodage, compilation…) uniquement pendant les périodes d'inactivité.</p>
+          <p class="card-desc">Daemon macOS qui suspend les tâches intensives quand vous travaillez et les reprend au repos. Deux modes : surveillance CPU ou inactivité clavier/souris. Interface menu bar native (Fyne).</p>
         </div>
         <div class="card-footer">
           <div class="tags">
             <span class="tag">macOS</span>
-            <span class="tag">Daemon</span>
-            <span class="tag">CPU monitoring</span>
+            <span class="tag">Menu bar</span>
             <span class="tag">SIGSTOP/SIGCONT</span>
+            <span class="tag">Launch Agent</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/WhenIdle" target="_blank" rel="noopener">Voir le repo →</a>
         </div>
@@ -171,12 +173,14 @@
             <h2>VideoSequencer</h2>
             <span class="lang-badge svelte">Svelte</span>
           </div>
-          <p class="card-desc">Séquenceur vidéo interactif construit avec Svelte.</p>
+          <p class="card-desc">Outil de composition vidéo : placez des clips sur une grille NxN synchronisée au BPM via une interface interactive. Rendu via FastAPI + MoviePy, déployé avec Docker Compose.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
-            <span class="tag">Svelte</span>
-            <span class="tag">Vidéo</span>
+            <span class="tag">SvelteKit</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">MoviePy</span>
+            <span class="tag">Docker</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/VideoSequencer" target="_blank" rel="noopener">Voir le repo →</a>
         </div>
@@ -207,13 +211,13 @@
             <h2>PrivateTab</h2>
             <span class="lang-badge typescript">TypeScript</span>
           </div>
-          <p class="card-desc">Extension navigateur (Chrome & Firefox) pour protéger des onglets sensibles par mot de passe. Verrouillage automatique, chiffrement PBKDF2, permissions minimales.</p>
+          <p class="card-desc">Extension Chrome & Firefox pour protéger des onglets sensibles par mot de passe. Verrouillage automatique, raccourcis clavier, chiffrement PBKDF2, permissions minimales. Manifest V3.</p>
         </div>
         <div class="card-footer">
           <div class="tags">
-            <span class="tag">Chrome</span>
-            <span class="tag">Firefox</span>
-            <span class="tag">Extension</span>
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Manifest V3</span>
             <span class="tag">PBKDF2</span>
           </div>
           <a class="repo-link" href="https://github.com/frederictriquet/PrivateTab" target="_blank" rel="noopener">Voir le repo →</a>
