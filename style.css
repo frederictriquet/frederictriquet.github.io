@@ -19,6 +19,7 @@
   --go: #00add8;
   --kotlin: #a97bff;
   --svelte: #ff3e00;
+  --shell: #4EAA25;
 }
 
 html {
@@ -218,6 +219,7 @@ main {
 .lang-badge.go { background: var(--go); color: #000; }
 .lang-badge.kotlin { background: var(--kotlin); }
 .lang-badge.svelte { background: var(--svelte); }
+.lang-badge.shell { background: var(--shell); }
 
 /* ─── Repo link ─── */
 .repo-link {
